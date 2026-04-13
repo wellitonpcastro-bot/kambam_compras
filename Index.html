@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. James | Gestão de Compras</title>
+    <style>
+        /* Reseta estilos básicos do navegador */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Impede barras de rolagem no corpo da página */
+            font-family: sans-serif;
+        }
+
+        /* O container que vai "cortar" o topo do iframe */
+        .iframe-container {
+            width: 100%;
+            height: 100vh; /* 100% da altura da tela */
+            overflow: hidden; /* Essencial para esconder a barra do Google */
+            position: relative;
+        }
+
+        /* O iframe em si */
+        .iframe-content {
+            width: 100%;
+            /* Altura maior que o container para podermos "empurrar" para cima */
+            height: calc(100% + 50px);
+            /* A MÁGICA ACONTECE AQUI: empurra o conteúdo 50px para cima */
+            margin-top: -50px;
+            border: none; /* Remove a borda do iframe */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container que vai esconder a barra -->
+    <div class="iframe-container">
+        <!-- Iframe com seu aplicativo -->
+        <iframe class="iframe-content" src="https://script.google.com/macros/s/AKfycbw75TUorWYAGRZBDWHBQ6kXqrbUGkeNcao3FtEWp4_VakyxCXoCijG6DdqIK4NnzdWj/exec"></iframe>
+    </div>
+</body>
+</html>
